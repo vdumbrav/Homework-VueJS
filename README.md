@@ -1,4 +1,4 @@
-# www
+# homework-vuejs
 
 ## Project setup
 ```
