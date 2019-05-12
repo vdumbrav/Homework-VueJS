@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  api:
+    build: docker/dev/api
+    volumes:
+      - ./data:/var/www/data:cached
+    ports:
+      - 3001:3000
+  app:
+    build: docker/dev/app
+    volumes:
+      - ./:/var/www:cached
+    ports:
+      - 8080:8080
