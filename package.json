@@ -5,7 +5,27 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prettier:check": "./node_modules/.bin/prettier --config ./.prettierrc.json --list-different $npm_package_config_files",
+    "prettier:fix": "./node_modules/.bin/prettier --config ./.prettierrc.json --write $npm_package_config_files",
+    "stylelint:check": "./node_modules/.bin/stylelint --config ./.stylelintrc.json $npm_package_config_files_scss ",
+    "stylelint:fix": "./node_modules/.bin/stylelint --config ./.stylelintrc.json --fix $npm_package_config_files_scss",
+    "all:check": "./node_modules/.bin/run-s stylelint:check prettier:check lint",
+    "all:fix": "./node_modules/.bin/run-s stylelint:fix prettier:fix lint -- --fix"
+  },
+  "config": {
+    "files": "{*.json,*.yml,./**/*{.vue,.js,.ts,.json,.html,.scss}}",
+    "files_scss": "./src/{*.scss,**/*.scss,*.vue,**/*.vue}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run all:check",
+      "post-merge": "yarn install"
+    }
+  },
+  "lint-staged": {
+    "*{.vue,.js,.ts,.json,.html,.scss}": ["yarn run all:fix", "git add"]
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -14,15 +34,24 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@starlab/stylelint-config": "^1.0.5",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.1",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.0.1",
     "vue-template-compiler": "^2.5.21"
   }
 }
