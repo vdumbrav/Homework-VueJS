@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "all:check": "./node_modules/.bin/run-s prettier:check lint",
-    "all:fix": "./node_modules/.bin/run-s prettier:fix lint -- --fix stylelint:fix ",
+    "all:check": "./node_modules/.bin/run-s prettier:check stylelint:check lint",
+    "all:fix": "./node_modules/.bin/run-s prettier:fix stylelint:fix lint -- --fix ",
     "prettier:check": "./node_modules/.bin/prettier --config ./.prettierrc.json --list-different $npm_package_config_files",
     "prettier:fix": "./node_modules/.bin/prettier --config ./.prettierrc.json --write $npm_package_config_files",
     "stylelint:check": "./node_modules/.bin/stylelint --config ./.stylelintrc.json $npm_package_config_files_scss ",
@@ -17,8 +17,8 @@
     "core-js": "^2.6.5",
     "element-ui": "^2.8.2",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "@starlab/stylelint-config": "^1.0.5",
@@ -32,15 +32,15 @@
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.2",
-    "husky": "^2.2.0",
+    "husky": "^2.3.0",
     "lint-staged": "^8.1.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.17.1",
-    "sass": "^1.18.0",
+    "sass": "^1.20.1",
     "sass-loader": "^7.1.0",
     "stylelint": "^10.0.1",
     "vue-cli-plugin-element": "^1.0.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.10"
   },
   "config": {
     "files": "{*.json,*.yml,./**/*{.vue,.js,.ts,.json,.html,.scss}}",
