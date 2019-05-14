@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <el-carousel indicator-position="outside">
-      <el-carousel-item v-for="item in 4" :key="item">
+      <el-carousel-item v-for="item in 5" :key="item">
         <h3>{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
@@ -11,26 +11,30 @@
 <style lang="scss" scoped>
 .about {
   display: flex;
-  width: 75%;
+  width: 750px;
+  margin: 50px auto;
 }
 
-.el-carousel__item {
+.el-carousel {
   min-width: 100%;
 
-  h3 {
-    margin: 0;
-    font-size: 18px;
-    line-height: 300px;
-    color: #475669;
-    opacity: 0.75;
-  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
 
-  &:nth-child(2n) {
-    background-color: #99a9bf;
-  }
+    h3 {
+      margin: 0;
+    }
 
-  &:nth-child(2n + 1) {
-    background-color: #d3dce6;
+    &:nth-child(even) {
+      background-color: #99a9bf;
+    }
+
+    &:nth-child(odd) {
+      background-color: #d3dce6;
+    }
   }
 }
 </style>
