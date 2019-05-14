@@ -23,6 +23,14 @@
       "options": {
         "parser": "vue"
       }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 80,
+        "parser": "json",
+        "proseWrap": "preserve"
+      }
     }
   ]
 }
