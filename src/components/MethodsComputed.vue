@@ -12,7 +12,7 @@
           <el-input v-model="lastName" />
         </el-form-item>
         <el-date-picker
-          @change="emitToParent($event)"
+          @change="emitToParent"
           v-model="date"
           :picker-options="dateRangeOptions"
           type="date"
@@ -53,7 +53,7 @@ export default {
     fullNameMethod () {
       return `${this.firstName} ${this.lastName}`;
     },
-    emitToParent (event) {
+    emitToParent () {
       this.$emit('child-to-parent', this.date);
     },
   },
