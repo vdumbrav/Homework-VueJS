@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h1>{{ msg }}</h1>
-    <div class="wrapper">
+    <div class="wrapper__form">
       <h2>computed: {{ fullNameComputed }}</h2>
       <h2>methods: {{ fullNameMethod() }}</h2>
       <el-form>
@@ -62,7 +62,15 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  max-width: 500px;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    width: 500px;
+    margin: 50px 0;
+    text-align: left;
+  }
 }
 </style>
