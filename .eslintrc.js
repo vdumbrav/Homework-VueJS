@@ -4,15 +4,15 @@ module.exports = {
     node: true,
   },
   extends: [
-    'vue',
     '@vue/standard',
     'eslint:recommended',
+    'standard',
     'plugin:vue/strongly-recommended',
     'prettier',
     'prettier/standard',
     'prettier/vue',
   ],
-  plugins: ['vue'],
+  plugins: ['prettier', 'standard', 'vue'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
