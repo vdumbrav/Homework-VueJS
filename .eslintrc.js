@@ -37,7 +37,6 @@ module.exports = {
     ],
     'semi': ['error', 'always'],
     'space-before-function-paren': ['error', 'always'],
-    'max-len': ['error', { code: 120 }],
   },
   parserOptions: {
     parser: 'babel-eslint',

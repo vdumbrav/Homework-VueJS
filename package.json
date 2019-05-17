@@ -51,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run all:fix",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn run all:check",
       "post-merge": "yarn install"
     }
