@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "all:check": "./node_modules/.bin/run-s prettier:check stylelint:check lint",
+    "all:check": "./node_modules/.bin/run-s stylelint:check lint",
     "all:fix": "./node_modules/.bin/run-s prettier:fix stylelint:fix lint -- --fix",
     "prettier:check": "./node_modules/.bin/prettier --config ./.prettierrc.json --list-different $npm_package_config_files",
     "prettier:fix": "./node_modules/.bin/prettier --config ./.prettierrc.json --write $npm_package_config_files",
