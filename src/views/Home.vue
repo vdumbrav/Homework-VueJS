@@ -1,29 +1,31 @@
 <template>
-  <div class="home">
-    <h2>date: {{ date }}</h2>
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <MethodsComputed msg="Welcome to Your Vue.js App" @child-to-parent="onChildDate" />
+  <div>
+    <Navbar />
+    <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="3"></el-col>
+      <el-col :span="3">
+        <Sidebar />
+      </el-col>
+      <el-col :span="12">
+        <div class="grid-content bg-purple-light"></div>
+      </el-col>
+      <el-col :span="3">
+        <div class="grid-content bg-purple"></div>
+      </el-col>
+      <el-col :span="3"></el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import MethodsComputed from '@/components/MethodsComputed.vue';
+import Navbar from '@/layout/components/Navbar.vue';
+import Sidebar from '@/layout/components/Sidebar.vue';
 
 export default {
   name: 'Home',
   components: {
-    MethodsComputed,
-  },
-  data () {
-    return {
-      date: '',
-    };
-  },
-  methods: {
-    onChildDate (value) {
-      this.date = value;
-    },
+    Navbar,
+    Sidebar,
   },
 };
 </script>
