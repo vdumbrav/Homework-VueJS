@@ -6,12 +6,8 @@
       <el-col :span="3">
         <Sidebar />
       </el-col>
-      <el-col :span="12">
-        <div class="grid-content bg-purple-light"></div>
-      </el-col>
-      <el-col :span="3">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
+      <el-col :span="12"></el-col>
+      <el-col :span="3"></el-col>
       <el-col :span="3"></el-col>
     </el-row>
   </div>

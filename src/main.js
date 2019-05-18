@@ -2,6 +2,8 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import './plugins/element.js';
 
+import '@/styles/index.scss'; // global css
+
 import App from './App.vue';
 import router from './router';
 import store from './store';

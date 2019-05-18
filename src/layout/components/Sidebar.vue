@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse">
+    <el-menu default-active="2" class="el-menu-vertical" :collapse="isCollapse">
       <el-menu-item index="2">
         <i class="el-icon-menu"></i>
         <span slot="title">
@@ -33,8 +33,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+.el-menu-vertical:not(.el-menu--collapse) {
   min-width: 100%;
   min-height: calc(100vh - 61px);
+  padding-top: 24px;
 }
 </style>

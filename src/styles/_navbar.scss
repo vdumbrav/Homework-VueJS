@@ -1,0 +1,12 @@
+.el-menu-item {
+  height: 36px;
+  padding: 0 10px;
+  line-height: 36px;
+  color: #303133;
+
+  &.is-active {
+    font-weight: 700;
+    background: rgba(12, 13, 14, .05);
+    border-right: 3px solid #f48024;
+  }
+}
