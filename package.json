@@ -14,6 +14,7 @@
     "stylelint:fix": "./node_modules/.bin/stylelint --config ./.stylelintrc.json --fix $npm_package_config_files_scss"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "element-ui": "^2.8.2",
     "vue": "^2.6.10",
